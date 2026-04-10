@@ -39,3 +39,13 @@ footer{
     color: white;
     font-size: 1em;
 }
+.body2{
+    background-color: #ffffff;
+
+}
+.centerPage{
+    margin: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
