@@ -1,0 +1,41 @@
+.netflix-color{
+    background-color:#221f1f;
+    border: 1px solid white;
+
+}
+body{
+    background-color: #141414;
+}
+.text-netflix{
+    color: #43465e;
+}
+.headerShadow{
+   background-image: linear-gradient(to bottom, #000000, #060606, #0b0b0b, #101010, #141414);
+}
+footer{
+    margin: 0.5em 10em;
+}
+.footerP{
+    font-size: 0.7em;
+
+}
+.styleButton{
+    color: #43465e;
+    background-color:#141414;
+    border: 1px solid #43465e;
+    width: 18em;
+}
+.styleButton2{
+    color: #ffffff;
+    background-color:#333333;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 18em;
+}
+.inputStyle{
+    background-color: #6f6f72;
+    width: 18em;
+    height: 2em;
+    color: white;
+    font-size: 1em;
+}

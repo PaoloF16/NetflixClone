@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netflix Clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="p-3">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"
+            ><img
+              src="./Netflix-assets/assets/netflix_logo.png"
+              alt="netflix-logo"
+              width="100px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- Barra Default Navbar -->
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <!-- Barra Default TV ShowNavbar -->
+                <a class="nav-link active" aria-current="page" href="#"
+                  >TV Shows</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- Barra Default Navbar -->
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Movies</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- Barra Default Navbar -->
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Recently Added</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- Barra Default My List Navbar -->
+                <a class="nav-link active" aria-current="page" href="#"
+                  >My List</a
+                >
+              </li>
+            </ul>
+            <div clas="row">
+              <!-- contenitore derecho de la barra -->
+              <div
+                class="col d-flex justify-content-between gap-3 align-items-center list-unstyled"
+              >
+                <form class="d-flex align-items-center" role="search">
+                  <!-- Bar-search -->
+                  <button class="btn btn-outline text-light" type="submit">
+                    <!-- button search -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                  </button>
+                </form>
+                <li class="nav-item list-unstyled">
+                  <!-- Barra Default Kids Navbar -->
+                  <a
+                    class="nav-link active text-light"
+                    aria-current="page"
+                    href="#"
+                    >KIDS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <!-- Barra Default TV ShowNavbar -->
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-bell-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <!-- img user dropdown -->
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    ><!-- Lista desplegable -->
+                    <img
+                      src="./Netflix-assets/assets/avatar.png"
+                      alt="avatar-img"
+                      width="30px"
+                    />
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="p-3">
+      <div class="row">
+        <!-- Conteedor Carrusel -->
+        <div class="col d-flex text-light">
+          <!-- block title carrusel -->
+          <div class="col d-flex justify-content-start align-items-center">
+            <h2 class="me-3 mb-0">TV Shows</h2>
+            <div class="dropdown netflix-color">
+              <!-- dropdown list -->
+              <button
+                class="btn btn-secondary border-0 dropdown-toggle netflix-color"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Genres
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container d-flex justify-content-end p-4 w-50">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-outline-secondary btn-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75Zm0 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Z"
+                  />
+                </svg>
+              </button>
+
+              <button type="button" class="btn btn-outline-secondary btn-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M3 3h5v5H3V3zm9 0h5v5h-5V3zM3 12h5v5H3v-5zm9 0h5v5h-5v-5z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row text-light p-3">
+          <h3 class="me-3 mb-0s">Trending Now</h3>
+        </div>
+        <div class="col p-5">
+          <div id="carouselTrending" class="carousel slide">
+            <!-- block carousel -->
+            <div class="carousel-inner">
+              <!-- inizio carrusel -->
+              <div class="carousel-item active">
+                <!-- slide carousel x6 -->
+                <div class="row g-2">
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/BTS-netflix.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/Casa-de-papel.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/daredevil.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/narcos.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-inner">
+                <!-- inizio carrusel -->
+                <div class="carousel-item">
+                  <!-- slide carousel x6 -->
+                  <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-images/S7-3-Netlix.webp"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-images/SQ-Netflix-5.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media12.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- buttons multimedia -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselTrending"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselTrending"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row text-light p-3">
+          <h3 class="me-3 mb-0s">Watch It Again</h3>
+        </div>
+        <div class="col p-5">
+          <div id="carouselAgain" class="carousel slide">
+            <!-- block carousel -->
+            <div class="carousel-inner">
+              <!-- inizio carrusel -->
+              <div class="carousel-item active">
+                <!-- slide carousel x6 -->
+                <div class="row g-2">
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/S7-2-Netflix.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-images/ST-Netflix-4.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media15.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media17.jpg"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-inner">
+                <!-- inizio carrusel -->
+                <div class="carousel-item">
+                  <!-- slide carousel x6 -->
+                  <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- buttons multimedia -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselAgain"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselAgain"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row text-light p-3">
+          <h3 class="me-3 mb-0s">New Releases</h3>
+        </div>
+        <div class="col p-5">
+          <div id="carouselNew" class="carousel slide">
+            <!-- block carousel -->
+            <div class="carousel-inner">
+              <!-- inizio carrusel -->
+              <div class="carousel-item active">
+                <!-- slide carousel x6 -->
+                <div class="row g-2">
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media0.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media0.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media0.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <!-- contenitote img -->
+                    <img
+                      src="./Netflix-assets/assets/media/media0.webp"
+                      class="d-block w-100 m-2"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-inner">
+                <!-- inizio carrusel -->
+                <div class="carousel-item">
+                  <!-- slide carousel x6 -->
+                  <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <!-- contenitore img -->
+                      <img
+                        src="./Netflix-assets/assets/media/media1.jpg"
+                        class="d-block w-100 m-2"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- buttons multimedia -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselNew"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselNew"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-5">
+      <div class="row">
+        <div class="col">
+          <!-- container buttons -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="#43465e"
+              fill-rule="evenodd"
+              d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.792C0 19.506.494 20 1.104 20h9.578v-7.745H8.076V9.237h2.606V7.01c0-2.584 1.578-3.99 3.883-3.99c1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.596-1.496 1.47v1.927h2.989l-.39 3.018h-2.6V20h5.097c.61 0 1.104-.494 1.104-1.104V1.104C20 .494 19.506 0 18.896 0Z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 432 432"
+          >
+            <path
+              fill="#43465e"
+              d="M384 99V56q0-11-11-11h-42q-11 0-11 11v43q0 10 11 10h42q11 0 11-10zM53 387h320q11 0 11-11V195h-45q2 12 2 21q0 53-37.5 90.5T213 344t-90.5-37.5T85 216q0-11 2-21H43v181q0 11 10 11zm160.5-256q-35.5 0-60.5 25t-25 60t25 60t60.5 25t60.5-25t25-60t-25-60t-60.5-25zM384 3q18 0 30.5 12.5T427 45v342q0 17-12.5 29.5T384 429H43q-18 0-30.5-12.5T0 387V45q0-17 12.5-29.5T43 3h341z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 1024 832"
+          >
+            <path
+              fill="#43465e"
+              d="M1024 128q-91 0-121 4q58-35 89-132q-9 6-29.5 19t-33 20.5T898 55t-36 11Q800 0 709 0q-92 0-144.5 38.5T512 160q0 4-1 27t-1 42.5t2 26.5q-134-7-237-53T96 64q-32 55-32 96q0 57 16 94.5t56 64.5q-40 1-72 1q0 152 146 181q-27 8-56 8q-20 0-39-4q19 61 76.5 97.5T320 640q-23 23-54 37t-71 19.5t-65 6.5t-66 1q-4 0-29 1.5T0 706q27 52 110.5 89T322 832q112 0 207.5-36.5t162-97.5T805 558t69-164t22-170q0-3 9.5-5.5T930 211t31.5-13.5t34-26.5t28.5-43z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="23"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#43465e"
+              d="M23 9.71a8.5 8.5 0 0 0-.91-4.13a2.92 2.92 0 0 0-1.72-1A78.36 78.36 0 0 0 12 4.27a78.45 78.45 0 0 0-8.34.3a2.87 2.87 0 0 0-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 0 0 0 6.48a9.55 9.55 0 0 0 .3 2a3.14 3.14 0 0 0 .71 1.36a2.86 2.86 0 0 0 1.49.78a45.18 45.18 0 0 0 6.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 0 0 1.53-.78a2.49 2.49 0 0 0 .61-1a10.58 10.58 0 0 0 .52-3.4c.04-.56.04-3.94.04-4.54ZM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="row p-2 footerP">
+        <div class="container">
+          <div class="row text-netflix">
+            <!-- container info -->
+            <div class="col d-flex flex-column">
+              <span>Audio and Subtitles</span>
+              <span>Media Center</span>
+              <span>Privacy</span>
+              <span>Contact Us</span>
+            </div>
+            <div class="col d-flex flex-column">
+              <span>Audio Description</span>
+              <span>Investor Relations</span>
+              <span>Legal Notices</span>
+            </div>
+            <div class="col d-flex flex-column">
+              <span>Help Center</span>
+              <span>Jobs</span>
+              <span>Cookie Preferences</span>
+            </div>
+            <div class="col d-flex flex-column">
+              <span>Gift Cards</span>
+              <span>Terms of Us</span>
+              <span>Corporate Information</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex" >
+        <a href="./userpage.html">
+          <button type="button" class="btn styleButton"style="width: 8em">Service Code</button>
+        </a>
+        
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
